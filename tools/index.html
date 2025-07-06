@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preniv — Enhanced Your Image</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preniv — Enhanced Your Image</title>
     <meta name="description" content="Convert your images to Studio Ghibli style, remove backgrounds, and upscale with AI magic.">
     <meta name="keywords" content="ghibli converter, studio ghibli, ai image, anime style, image converter, remove background, upscale">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 min-h-screen">
-    <div class="container mx-auto px-4 py-8">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-8">
-                <h1 class="text-4xl font-bold text-gray-800 mb-2">
-                    <i class="fas fa-magic mr-3 text-blue-600"></i>
-                    Preniv Enhanced Image
-                </h1>
-                <p class="text-gray-600">Transform your images into Studio Ghibli style, remove backgrounds, and upscale with AI</p>
-            </div>
 
-            <div id="messageContainer" class="mb-4 hidden"></div>
+<body class="bg-slate-50 min-h-screen">
+  <nav class="bg-white shadow-sm border-b border-slate-200">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <i class="fas fa-magic text-blue-400 text-2xl mr-3"></i>
+          <span class="text-xl font-bold text-slate-800">Preniv Enhanced</span>
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Home</a>
+          <a href="/prenivdlapp/" class="text-slate-600 hover:text-blue-400 transition-colors">Downloader</a>
+          <a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">About</a>
+          <a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">FAQ</a>
+          <a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Contact</a>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-toggle" class="text-slate-600 hover:text-blue-400">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="space-y-2">
+          <a href="#" class="block text-slate-600 hover:text-blue-400 transition-colors py-2">Home</a>
+          <a href="/prenivdlapp/" class="block text-slate-600 hover:text-blue-400 transition-colors py-2">Downloader</a>
+          <a href="#" class="block text-slate-600 hover:text-blue-400 transition-colors py-2">About</a>
+          <a href="#" class="block text-slate-600 hover:text-blue-400 transition-colors py-2">FAQ</a>
+          <a href="#" class="block text-slate-600 hover:text-blue-400 transition-colors py-2">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mx-auto px-4 py-8">
+    <div id="messageContainer" class="mb-4 hidden"></div>
 
             <div class="bg-white rounded-lg shadow-md p-6 mb-6">
                 <div id="uploadSection">
@@ -160,10 +185,92 @@
             </button>
         </div>
     </div>
-  <script language="JavaScript" type="text/javascript" src="https://gnrcounter.com/counter.php?accId=04ddaf65a8b3dcc39d4c5dcc11fc445f"></script>
-  <noscript>
-  <a href="https://preniv.com" title="Web Analytics">Web Analytics</a>
-  </noscript>
-  <script type="text/javascript" src="script.js"></script>        
- </body>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 mt-16">
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="md:col-span-1">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-magic text-blue-400 text-2xl mr-3"></i>
+            <span class="text-xl font-bold text-slate-800">Preniv Downloader</span>
+          </div>
+          <p class="text-slate-600 text-sm">
+            Transform your images with AI magic. Convert to Studio Ghibli style, remove backgrounds, and upscale with professional quality.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-slate-800 mb-3">Feature</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Ghibli Style</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Remove Background</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Upscale 4x</a></li>
+            <li><a href="/prenivdlapp/" class="text-slate-600 hover:text-blue-400 transition-colors">Downloader</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-slate-800 mb-3">Support</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">FAQ</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Help Center</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Contact Us</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Report Issue</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-slate-800 mb-3">Legal</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Cookie Policy</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-200 mt-8 pt-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-slate-600 text-sm">
+            © 2024 Preniv Downloader. All rights reserved.
+             <script language="JavaScript" type="text/javascript" src="https://gnrcounter.com/counter.php?accId=04ddaf65a8b3dcc39d4c5dcc11fc445f"></script>
+              <noscript>
+              <a href="https://preniv.com" title="Web Analytics">Web Analytics</a>
+            </noscript>
+          </p>
+          <div class="flex space-x-4 mt-4 md:mt-0">
+            <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
+              <i class="fab fa-facebook text-lg"></i>
+            </a>
+            <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
+              <i class="fab fa-twitter text-lg"></i>
+            </a>
+            <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
+              <i class="fab fa-instagram text-lg"></i>
+            </a>
+            <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
+              <i class="fab fa-youtube text-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+
+</body>
 </html>
