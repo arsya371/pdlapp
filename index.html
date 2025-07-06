@@ -1,342 +1,208 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preniv — Free Downloader & Convert Tools!</title>
-    <meta name="description" content="Download videos, audio, images from any platform and convert between formats instantly. Fast, free, and secure.">
-    <meta name="keywords" content="video downloader, audio converter, youtube downloader, format converter, mp4, mp3, image converter, free download">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preniv Downloader — Multi Platform</title>
+  <meta name="description" content="Preniv Downloader dengan dukungan penuh berbagai platform.">
+  <meta name="keywords" content="preniv downloader, tiktok downloader, facebook downloader, spotify downloader, instagram downloader, youtube downloader">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50">
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center space-x-2">
-                    <div clJoin millions of users who trust Preniv for their downloading and conversion needsass="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                        <i class="fas fa-download text-dark text-lg"></i>
-                    </div>
-                    <a class="text-xl font-bold text-gray-900">Preniv</a>
-                </div>
 
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#features" class="text-gray-700 hover:text-blue-600 transition-colors">Features</a>
-                    <a href="#platforms" class="text-gray-700 hover:text-blue-600 transition-colors">Platforms</a>
-                    <a href="/prenivdlapp/tools/" class="text-gray-700 hover:text-blue-600 transition-colors">Enhanced Image</a>
-                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
-                </nav>
-                
-            </div>
+<body class="bg-slate-50 min-h-screen">
+  <nav class="bg-white shadow-sm border-b border-slate-200">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <i class="fas fa-cloud-download-alt text-blue-400 text-2xl mr-3"></i>
+          <span class="text-xl font-bold text-slate-800">Preniv Downloader</span>
         </div>
-    </header>
-
-    <section class="pt-24 pb-12 bg-gradient-to-br from-blue-50 via-white to-purple-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                    <i class="fas fa-magic mr-2"></i>
-                    Free Forever • No Registration Required
-                </div>
-                
-                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                    Download & Convert
-                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                        Anything
-                    </span>
-                </h1>
-                
-                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                    Download videos, audio, and images from any platform. Convert between formats instantly. 
-                    <span class="text-blue-600 font-semibold">Fast, free, and secure.</span>
-                </p>
-                
-                <div class="flex justify-center space-x-4 mb-8">
-                    <div class="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
-                        <i class="fab fa-youtube text-white text-lg"></i>
-                    </div>
-                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
-                        <i class="fab fa-instagram text-white text-lg"></i>
-                    </div>
-                    <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
-                        <i class="fab fa-tiktok text-white text-lg"></i>
-                    </div>
-                    <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
-                        <i class="fab fa-facebook text-white text-lg"></i>
-                    </div>
-                    <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
-                        <i class="fab fa-spotify text-white text-lg"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-2xl p-8 mb-8 shadow-lg border border-gray-200">
-                    <div id="platformMessage" class="hidden mb-4">
-                        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
-                            <i class="fas fa-check-circle mr-2"></i>
-                            <span id="platformText">Platform detected</span>
-                        </div>
-                    </div>
-                    
-                    <div id="successMessage" class="hidden mb-4"></div>
-                    <div id="errorMessage" class="hidden mb-4"></div>
-
-                    <div class="mb-6">
-                        <label class="block text-lg font-medium mb-4 text-gray-700">
-                            <i class="fas fa-link mr-2 text-blue-600"></i>Paste your link here
-                        </label>
-                        <div class="flex flex-col md:flex-row gap-4">
-                            <input 
-                                type="url" 
-                                id="videoUrl" 
-                                placeholder="https://youtube.com/watch?v=..."
-                                class="flex-1 px-6 py-4 bg-gray-50 border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-                            >
-                            <select 
-                                id="platformSelect"
-                                class="px-6 py-4 bg-gray-50 border border-gray-300 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-                            >
-                                <option value="ytmp4">YouTube (MP4)</option>
-                                <option value="ytmp3">YouTube (MP3)</option>
-                                <option value="tiktok">TikTok</option>
-                                <option value="facebook">Facebook</option>
-                                <option value="instagram">Instagram</option>
-                                <option value="spotify">Spotify</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <button 
-                        id="fetchBtn"
-                        class="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-lg"
-                    >
-                        <i class="fas fa-download mr-2"></i>Download now!
-                    </button>
-                </div>
-
-                <div class="flex flex-wrap justify-center gap-3 mb-8">
-                    <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">MP4</span>
-                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">MP3</span>
-                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">WEBM</span>
-                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">JPG</span>
-                    <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">PNG</span>
-                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">GIF</span>
-                </div>
-
-                <div id="loading" class="hidden text-center mb-8">
-                    <div class="inline-block p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
-                        <i class="fas fa-spinner fa-spin text-4xl text-blue-600"></i>
-                    </div>
-                    <p class="text-gray-600 mt-4">Processing your request...</p>
-                </div>
-
-                <div id="videoInfo" class="hidden">
-                    <div class="bg-white rounded-2xl p-8 mb-8 shadow-lg border border-gray-200">
-                        <h2 class="text-2xl font-bold mb-6 text-gray-900">
-                            <i class="fas fa-play-circle mr-2 text-blue-600"></i>Preview
-                        </h2>
-                        <div id="videoDetails"></div>
-                    </div>
-                </div>
-                
-                <div id="downloadOptions" class="hidden">
-                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                        <h2 class="text-2xl font-bold mb-6 text-gray-900">
-                            <i class="fas fa-download mr-2 text-blue-600"></i>Download Options
-                        </h2>
-                        <div id="downloadLinks"></div>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-3 gap-8 max-w-md mx-auto mt-12">
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-gray-900">1M+</div>
-                        <div class="text-gray-600 text-sm">Downloads</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-gray-900">50+</div>
-                        <div class="text-gray-600 text-sm">Platforms</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-gray-900">100%</div>
-                        <div class="text-gray-600 text-sm">Free</div>
-                    </div>
-                </div>
-            </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Home</a>
+          <a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">About</a>
+          <a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">FAQ</a>
+          <a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Contact</a>
         </div>
-    </section>
-
-    <section id="features" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Preniv?</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Experience the most advanced and user-friendly downloader with cutting-edge features
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-bolt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-gray-900">Lightning Fast</h3>
-                    <p class="text-gray-600">Download your favorite content in seconds with our optimized servers and advanced processing algorithms.</p>
-                </div>
-
-                <div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-shield-alt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-gray-900">100% Secure</h3>
-                    <p class="text-gray-600">Your privacy is our priority. All downloads are processed securely without storing any personal data.</p>
-                </div>
-
-                <div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-gray-900">Mobile Friendly</h3>
-                    <p class="text-gray-600">Works perfectly on all devices. Download on-the-go with our responsive design and mobile optimization.</p>
-                </div>
-            </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-toggle" class="text-slate-600 hover:text-blue-400">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
         </div>
-    </section>
-
-    <section id="platforms" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Supported Platforms</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Download from all your favorite platforms with just one click
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                <div class="text-center group">
-                    <div class="w-16 h-16 bg-red-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-200">
-                        <i class="fab fa-youtube text-white text-2xl"></i>
-                    </div>
-                    <span class="text-gray-700 font-medium">YouTube</span>
-                </div>
-                <div class="text-center group">
-                    <div class="w-16 h-16 bg-black rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-200">
-                        <i class="fab fa-tiktok text-white text-2xl"></i>
-                    </div>
-                    <span class="text-gray-700 font-medium">TikTok</span>
-                </div>
-                <div class="text-center group">
-                    <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-200">
-                        <i class="fab fa-facebook text-white text-2xl"></i>
-                    </div>
-                    <span class="text-gray-700 font-medium">Facebook</span>
-                </div>
-                <div class="text-center group">
-                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-200">
-                        <i class="fab fa-instagram text-white text-2xl"></i>
-                    </div>
-                    <span class="text-gray-700 font-medium">Instagram</span>
-                </div>
-                <div class="text-center group">
-                    <div class="w-16 h-16 bg-green-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-200">
-                        <i class="fab fa-spotify text-white text-2xl"></i>
-                    </div>
-                    <span class="text-gray-700 font-medium">Spotify</span>
-                </div>
-                <div class="text-center group">
-                    <div class="w-16 h-16 bg-orange-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-200">
-                        <i class="fas fa-globe text-white text-2xl"></i>
-                    </div>
-                    <span class="text-gray-700 font-medium">More Soon</span>
-                </div>
-            </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="space-y-2">
+          <a href="#" class="block text-slate-600 hover:text-blue-400 transition-colors py-2">Home</a>
+          <a href="#" class="block text-slate-600 hover:text-blue-400 transition-colors py-2">About</a>
+          <a href="#" class="block text-slate-600 hover:text-blue-400 transition-colors py-2">FAQ</a>
+          <a href="#" class="block text-slate-600 hover:text-blue-400 transition-colors py-2">Contact</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </nav>
 
-    <section id="about" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Download your favorite content in just 3 simple steps
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-white font-bold text-xl">1</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Paste Link</h3>
-                    <p class="text-gray-600">Copy and paste the URL of the video or audio you want to download</p>
-                </div>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold text-slate-800 mb-2">
+          <i class="fas fa-cloud-download-alt mr-3 text-blue-400"></i>
+          Preniv Downloader
+        </h1>
+        <p class="text-slate-600">Download videos from TikTok, YouTube, Instagram, Facebook, and more</p>
+      </div>
 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-white font-bold text-xl">2</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Choose Format</h3>
-                    <p class="text-gray-600">Select your preferred format and quality for the download</p>
-                </div>
+      <div id="errorMessage" class="mb-4 hidden"></div>
 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-white font-bold text-xl">3</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Download</h3>
-                    <p class="text-gray-600">Click download and enjoy your content offline!</p>
-                </div>
-            </div>
+      <div id="successMessage" class="mb-4 hidden"></div>
+
+      <div id="platformMessage" class="mb-4 hidden">
+        <div class="bg-blue-50 border border-blue-200 text-blue-700 px-4 py-3 rounded-lg">
+          <i class="fas fa-info-circle mr-2"></i>
+          <span id="platformText"></span>
         </div>
-    </section>
+      </div>
 
-    <section class="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Need Image Enhanced?</h2>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a class="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors" href="/prenivdlapp/tools/">
-                    Enhanced now! 
-                </a>
-            </div>
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-6">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-slate-700 mb-2">Video URL</label>
+          <input type="text" id="videoUrl" placeholder="Paste your video URL here..." class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-200" />
         </div>
-    </section>
 
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-download text-white"></i>
-                        </div>
-                        <span class="text-xl font-bold">Preniv</span>
-                    </div>
-                    <p class="text-gray-400">
-                        Free Downloader & Convert Tools!
-                    </p>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Support</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Preniv. All rights reserved. | Made with ❤️ for content creators</p>
-                <script language="JavaScript" type="text/javascript" src="https://gnrcounter.com/counter.php?accId=04ddaf65a8b3dcc39d4c5dcc11fc445f"></script>
-                <noscript>
-                <a href="https://preniv.com" title="Web Analytics">Web Analytics</a>
-                </noscript>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Platform</label>
+            <select id="platformSelect" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-200">
+              <option value="tiktok">TikTok</option>
+              <option value="ytmp4">YouTube (Video)</option>
+              <option value="ytmp3">YouTube (Audio)</option>
+              <option value="instagram">Instagram</option>
+              <option value="facebook">Facebook</option>
+              <option value="spotify">Spotify</option>
+            </select>
+          </div>
+          <div class="flex items-end">
+            <button id="fetchBtn" class="w-full bg-blue-400 text-white py-3 px-6 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 transition-all duration-200 font-medium">
+              <i class="fas fa-download mr-2"></i>Download now!
+            </button>
+          </div>
         </div>
-    </footer>
-   <script type="text/javascript" src="script.js"></script>        
-  </body>
- </html>
+      </div>
+
+      <div id="loading" class="hidden text-center py-8">
+        <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400"></div>
+        <p class="text-slate-600 mt-4">Mengambil informasi video...</p>
+      </div>
+
+      <div id="platformMessage" class="hidden mb-6">
+        <div class="bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-3 rounded-lg">
+          <i class="fas fa-check-circle mr-2"></i>
+          <span id="platformText">Platform detected: TIKTOK</span>
+        </div>
+      </div>
+
+      <div id="videoInfo" class="hidden bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+        <h2 class="text-2xl font-bold text-slate-800 mb-4">
+          <i class="fas fa-info-circle text-blue-400"></i> Informasi Video
+        </h2>
+        <div id="videoDetails"></div>
+      </div>
+
+      <div id="downloadOptions" class="hidden bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <h2 class="text-2xl font-bold text-slate-800 mb-4">
+          <i class="fas fa-download text-emerald-500"></i> Opsi Download
+        </h2>
+        <div id="downloadLinks"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 mt-16">
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="md:col-span-1">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-cloud-download-alt text-blue-400 text-2xl mr-3"></i>
+            <span class="text-xl font-bold text-slate-800">Preniv Downloader</span>
+          </div>
+          <p class="text-slate-600 text-sm">
+            Platform terpercaya untuk download video dari berbagai social media dengan mudah dan cepat.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-slate-800 mb-3">Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">TikTok Downloader</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">YouTube Downloader</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Instagram Downloader</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Facebook Downloader</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Spotify Downloader</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-slate-800 mb-3">Support</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">FAQ</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Help Center</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Contact Us</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Report Issue</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-slate-800 mb-3">Legal</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Cookie Policy</a></li>
+            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-200 mt-8 pt-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-slate-600 text-sm">
+            © 2024 Preniv Downloader. All rights reserved.
+          </p>
+          <noscript>
+            <a href="https://preniv.com" title="Web Analytics">Web Analytics</a>
+          </noscript>
+          <div class="flex space-x-4 mt-4 md:mt-0">
+            <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
+              <i class="fab fa-facebook text-lg"></i>
+            </a>
+            <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
+              <i class="fab fa-twitter text-lg"></i>
+            </a>
+            <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
+              <i class="fab fa-instagram text-lg"></i>
+            </a>
+            <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
+              <i class="fab fa-youtube text-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script language="JavaScript" type="text/javascript" src="https://gnrcounter.com/counter.php?accId=04ddaf65a8b3dcc39d4c5dcc11fc445f"></script>
+  <script type="text/javascript" src="script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
