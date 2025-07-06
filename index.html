@@ -10,7 +10,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
-    <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -20,8 +19,7 @@
                     </div>
                     <a class="text-xl font-bold text-gray-900">Preniv</a>
                 </div>
-                
-                <!-- Desktop Navigation -->
+
                 <nav class="hidden md:flex space-x-8">
                     <a href="#features" class="text-gray-700 hover:text-blue-600 transition-colors">Features</a>
                     <a href="#platforms" class="text-gray-700 hover:text-blue-600 transition-colors">Platforms</a>
@@ -33,7 +31,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="pt-24 pb-12 bg-gradient-to-br from-blue-50 via-white to-purple-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
@@ -54,7 +51,6 @@
                     <span class="text-blue-600 font-semibold">Fast, free, and secure.</span>
                 </p>
                 
-                <!-- Platform Icons -->
                 <div class="flex justify-center space-x-4 mb-8">
                     <div class="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
                         <i class="fab fa-youtube text-white text-lg"></i>
@@ -73,11 +69,9 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Main Download Interface -->
+
             <div class="max-w-4xl mx-auto">
                 <div class="bg-white rounded-2xl p-8 mb-8 shadow-lg border border-gray-200">
-                    <!-- Platform Detection Message -->
                     <div id="platformMessage" class="hidden mb-4">
                         <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
                             <i class="fas fa-check-circle mr-2"></i>
@@ -85,11 +79,9 @@
                         </div>
                     </div>
                     
-                    <!-- Success/Error Messages -->
                     <div id="successMessage" class="hidden mb-4"></div>
                     <div id="errorMessage" class="hidden mb-4"></div>
-                    
-                    <!-- Input Section -->
+
                     <div class="mb-6">
                         <label class="block text-lg font-medium mb-4 text-gray-700">
                             <i class="fas fa-link mr-2 text-blue-600"></i>Paste your link here
@@ -114,8 +106,7 @@
                             </select>
                         </div>
                     </div>
-                    
-                    <!-- Download Button -->
+
                     <button 
                         id="fetchBtn"
                         class="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-lg"
@@ -123,8 +114,7 @@
                         <i class="fas fa-download mr-2"></i>Download now!
                     </button>
                 </div>
-                
-                <!-- Quick Format Options -->
+
                 <div class="flex flex-wrap justify-center gap-3 mb-8">
                     <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">MP4</span>
                     <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">MP3</span>
@@ -133,16 +123,14 @@
                     <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">PNG</span>
                     <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">GIF</span>
                 </div>
-                
-                <!-- Loading Indicator -->
+
                 <div id="loading" class="hidden text-center mb-8">
                     <div class="inline-block p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
                         <i class="fas fa-spinner fa-spin text-4xl text-blue-600"></i>
                     </div>
                     <p class="text-gray-600 mt-4">Processing your request...</p>
                 </div>
-                
-                <!-- Results Section -->
+
                 <div id="videoInfo" class="hidden">
                     <div class="bg-white rounded-2xl p-8 mb-8 shadow-lg border border-gray-200">
                         <h2 class="text-2xl font-bold mb-6 text-gray-900">
@@ -160,8 +148,7 @@
                         <div id="downloadLinks"></div>
                     </div>
                 </div>
-                
-                <!-- Stats -->
+
                 <div class="grid grid-cols-3 gap-8 max-w-md mx-auto mt-12">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-gray-900">1M+</div>
@@ -179,8 +166,7 @@
             </div>
         </div>
     </section>
-    
-    <!-- Features Section -->
+
     <section id="features" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -191,7 +177,6 @@
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
                 <div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
                     <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-bolt text-white text-2xl"></i>
@@ -199,8 +184,7 @@
                     <h3 class="text-xl font-bold mb-4 text-gray-900">Lightning Fast</h3>
                     <p class="text-gray-600">Download your favorite content in seconds with our optimized servers and advanced processing algorithms.</p>
                 </div>
-                
-                <!-- Feature 2 -->
+
                 <div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
                     <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-shield-alt text-white text-2xl"></i>
@@ -208,8 +192,7 @@
                     <h3 class="text-xl font-bold mb-4 text-gray-900">100% Secure</h3>
                     <p class="text-gray-600">Your privacy is our priority. All downloads are processed securely without storing any personal data.</p>
                 </div>
-                
-                <!-- Feature 3 -->
+
                 <div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
                     <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-mobile-alt text-white text-2xl"></i>
@@ -220,8 +203,7 @@
             </div>
         </div>
     </section>
-    
-    <!-- Supported Platforms Section -->
+
     <section id="platforms" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -272,7 +254,6 @@
         </div>
     </section>
 
-    <!-- How It Works Section -->
     <section id="about" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -283,7 +264,6 @@
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Step 1 -->
                 <div class="text-center">
                     <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-white font-bold text-xl">1</span>
@@ -291,8 +271,7 @@
                     <h3 class="text-xl font-semibold text-gray-900 mb-2">Paste Link</h3>
                     <p class="text-gray-600">Copy and paste the URL of the video or audio you want to download</p>
                 </div>
-                
-                <!-- Step 2 -->
+
                 <div class="text-center">
                     <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-white font-bold text-xl">2</span>
@@ -300,8 +279,7 @@
                     <h3 class="text-xl font-semibold text-gray-900 mb-2">Choose Format</h3>
                     <p class="text-gray-600">Select your preferred format and quality for the download</p>
                 </div>
-                
-                <!-- Step 3 -->
+
                 <div class="text-center">
                     <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-white font-bold text-xl">3</span>
@@ -313,13 +291,9 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold text-white mb-4">Need Image Enhanced?</h2>
-            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Enhance your images effortlessly — join millions who rely on Preniv for their download and conversion needs.
-            </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a class="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors" href="/prenivdlapp/tools/">
                     Enhanced now! 
@@ -327,8 +301,7 @@
             </div>
         </div>
     </section>
-    
-    <!-- Footer -->
+
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
@@ -342,26 +315,6 @@
                     <p class="text-gray-400">
                         Free Downloader & Convert Tools!
                     </p>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Features</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Video Downloader</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Audio Converter</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Format Converter</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Image Downloader</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Platforms</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">YouTube</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">TikTok</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Facebook</a></li>
-                    </ul>
                 </div>
                 
                 <div>
@@ -384,7 +337,6 @@
             </div>
         </div>
     </footer>
-                
-<script type="text/javascript" src="script.js"></script>        
-</body>
-</html>
+   <script type="text/javascript" src="script.js"></script>        
+  </body>
+ </html>
