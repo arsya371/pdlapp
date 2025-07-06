@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preniv Downloader — Multi Platform</title>
+    <meta name="description" content="Preniv Downloader dengan dukungan penuh berbagai platform.">
+    <meta name="keywords" content="preniv downloader, tiktok downloader, facebook downloader, spotify downloader, instagram downloader, youtube downloader">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-gray-800 mb-2">
+                    <i class="fas fa-cloud-download-alt mr-3 text-blue-600"></i>
+                    Preniv Downloader
+                </h1>
+                <p class="text-gray-600">Download videos from TikTok, YouTube, Instagram, Facebook, and more</p>
+            </div>
+
+            <div id="errorMessage" class="mb-4 hidden"></div>
+            <div id="successMessage" class="mb-4 hidden"></div>
+
+            <div id="platformMessage" class="mb-4 hidden">
+                <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    <span id="platformText"></span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Video URL</label>
+                    <input
+                        type="text"
+                        id="videoUrl"
+                        placeholder="Paste your video URL here..."
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Platform</label>
+                        <select id="platformSelect" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="tiktok">TikTok</option>
+                            <option value="ytmp4">YouTube (Video)</option>
+                            <option value="ytmp3">YouTube (Audio)</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="spotify">Spotify</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button
+                            id="fetchBtn"
+                            class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+                        >
+                            <i class="fas fa-download mr-2"></i>Download now!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        <div id="loading" class="hidden text-center py-8">
+            <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+            <p class="text-gray-600 mt-4">Mengambil informasi video...</p>
+        </div>
+
+        <div id="platformMessage" class="hidden mb-6">
+            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+                <i class="fas fa-check-circle mr-2"></i>
+                <span id="platformText">Platform detected: TIKTOK</span>
+            </div>
+        </div>
+        
+        <div id="videoInfo" class="hidden bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                <i class="fas fa-info-circle text-blue-600"></i> Informasi Video
+            </h2>
+            <div id="videoDetails"></div>
+        </div>
+
+        <div id="downloadOptions" class="hidden bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                <i class="fas fa-download text-green-600"></i> Opsi Download
+            </h2>
+            <div id="downloadLinks"></div>
+        </div>
+    </div>
+        
+<script language="JavaScript" type="text/javascript" src="https://gnrcounter.com/counter.php?accId=04ddaf65a8b3dcc39d4c5dcc11fc445f"></script>        
+<noscript>
+<a href="https://preniv.com" title="Web Analytics">Web Analytics</a>
+</noscript>
+<script type="text/javascript" src="script.js"></script>        
+</body>
+</html>
