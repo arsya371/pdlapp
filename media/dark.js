@@ -17,8 +17,20 @@ function initDarkMode() {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   }
   
-  darkModeToggle.addEventListener('click', toggleDarkMode);
-  darkModeToggleMobile.addEventListener('click', toggleDarkMode);
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', toggleDarkMode);
+  }
+  
+  if (darkModeToggleMobile) {
+    darkModeToggleMobile.addEventListener('click', toggleDarkMode);
+  }
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key === 'd') {
+      e.preventDefault();
+      toggleDarkMode();
+    }
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
