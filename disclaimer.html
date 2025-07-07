@@ -8,39 +8,7 @@
   <meta name="description" content="Disclaimer dan syarat ketentuan penggunaan Preniv Media Tool.">
   <meta name="keywords" content="preniv media tools, disclaimer, terms of service, syarat ketentuan">
   <link rel=document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('section[id]');
-      const navLinks = document.querySelectorAll('nav a[href^="#"]');
-      
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('font-bold', 'text-blue-800', 'dark:text-blue-300');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('font-bold', 'text-blue-800', 'dark:text-blue-300');
-        }
-      });
-    });"icon" type="image/x-icon" href="./media/logo_preniv.ico">
-  
+  <link rel="icon" type="image/x-icon" href="./media/logo_preniv.ico">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <script>
