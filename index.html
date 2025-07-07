@@ -1,223 +1,261 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Preniv Downloader — Multi Platform</title>
-  <meta name="description" content="Preniv Downloader dengan dukungan penuh berbagai platform.">
-  <meta name="keywords" content="preniv downloader, tiktok downloader, facebook downloader, spotify downloader, instagram downloader, youtube downloader">
+  <title>Preniv Media Tool - Free!</title>
+  <meta name="description" content="Preniv Media Tools dengan dukungan penuh berbagai platform.">
+  <meta name="keywords" content="preniv media tools, tiktok downloader, facebook downloader, spotify downloader, instagram downloader, youtube downloader">
   <link rel="icon" type="image/x-icon" href="./media/logo_preniv.ico">
-  <meta property="og:title" content="Preniv Downloader — Multi Platform">
-  <meta property="og:description" content="Preniv Downloader dengan dukungan penuh berbagai platform.">
+  <meta property="og:title" content="Preniv Media Tools — Multi Platform">
+  <meta property="og:description" content="Preniv Media Tools dengan dukungan penuh berbagai platform.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://preniv.com">
-  <meta property="og:site_name" content="Preniv Downloader">
+  <meta property="og:site_name" content="Preniv Media Tools">
   <meta property="og:locale" content="id_ID">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:image" content="./media/banner_preniv.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Preniv Interface Preview">
+  <meta property="og:image:alt" content="Preniv Media Tools Interface Preview">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-slate-50 min-h-screen">
-  <nav class="bg-white shadow-sm border-b border-slate-200">
-    <div class="container mx-auto px-4">
+<body class="min-h-screen bg-white">">
+  <header class="bg-white/90 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex items-center">
-          <i class="fas fa-cloud-download-alt text-blue-400 text-2xl mr-3"></i>
-          <span class="text-xl font-bold text-slate-800">Preniv Downloader</span>
+          <h1 class="text-2xl font-bold text-slate-800">
+            <i class="fas fa-tools mr-2 text-blue-500"></i>
+            Unified Media Tool
+          </h1>
         </div>
-        <div class="hidden md:flex space-x-6">
-          <a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Home</a>
-          <a href="/prenivdlapp/tools/" class="text-slate-600 hover:text-blue-400 transition-colors">Tools</a>
-          <a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">About</a>
-          <a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">FAQ</a>
-          <a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Contact</a>
-        </div>
-        <div class="md:hidden">
-          <button id="mobile-menu-toggle" class="text-slate-600 hover:text-blue-400">
-            <i class="fas fa-bars text-xl"></i>
-          </button>
-        </div>
-      </div>
-      <div id="mobile-menu" class="hidden md:hidden pb-4">
-        <div class="space-y-2">
-          <a href="#" class="block text-slate-600 hover:text-blue-400 transition-colors py-2">Home</a>
-          <a href="/prenivdlapp/tools/" class="block text-slate-600 hover:text-blue-400 transition-colors py-2">Tools</a>
-          <a href="#" class="block text-slate-600 hover:text-blue-400 transition-colors py-2">About</a>
-          <a href="#" class="block text-slate-600 hover:text-blue-400 transition-colors py-2">FAQ</a>
-          <a href="#" class="block text-slate-600 hover:text-blue-400 transition-colors py-2">Contact</a>
-        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors">Home</a>
+          <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors">About</a>
+          <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
+        </nav>
+        <button id="hamburgerBtn" class="md:hidden">
+          <i class="fas fa-bars text-slate-600"></i>
+        </button>
       </div>
     </div>
-  </nav>
-
-  <main class="container mx-auto px-4 py-8">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-8">
-        <h1 class="text-4xl font-bold text-slate-800 mb-2">
-          <i class="fas fa-cloud-download-alt mr-3 text-blue-400"></i>
-          Preniv Downloader
-        </h1>
-        <p class="text-slate-600">Download videos from TikTok, YouTube, Instagram, Facebook, and more</p>
+    <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#" class="block px-3 py-2 text-slate-600 hover:text-blue-600 transition-colors">Home</a>
+        <a href="#" class="block px-3 py-2 text-slate-600 hover:text-blue-600 transition-colors">About</a>
+        <a href="#" class="block px-3 py-2 text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
       </div>
+    </div>
+  </header>
 
-      <div id="errorMessage" class="mb-4 hidden"></div>
-
-      <div id="successMessage" class="mb-4 hidden"></div>
-
-      <div id="platformMessage" class="mb-4 hidden">
-        <div class="bg-blue-50 border border-blue-200 text-blue-700 px-4 py-3 rounded-lg">
-          <i class="fas fa-info-circle mr-2"></i>
-          <span id="platformText"></span>
-        </div>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="mb-8">
+      <div class="border-b border-gray-200">
+        <nav class="flex space-x-8">
+          <button id="imageTab" class="active py-2 px-1 border-b-2 border-blue-500 text-blue-600 font-medium">
+            <i class="fas fa-image mr-2"></i>Image Tools
+          </button>
+          <button id="videoTab" class="py-2 px-1 border-b-2 border-transparent text-slate-500 hover:text-slate-700 font-medium">
+            <i class="fas fa-video mr-2"></i>Video Downloader
+          </button>
+        </nav>
       </div>
+    </div>
 
-      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-6">
-        <div class="mb-4">
-          <label class="block text-sm font-medium text-slate-700 mb-2">Video URL</label>
-          <input type="text" id="videoUrl" placeholder="Paste your video URL here..." class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-200" />
-        </div>
+    <div id="imageContent" class="active">
+      <div id="imageUploadSection" class="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 mb-6 border border-gray-200">
+        <h2 class="text-xl font-semibold mb-4 text-slate-800">
+          <i class="fas fa-magic mr-2"></i>Image Processing Tools
+        </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">Platform</label>
-            <select id="platformSelect" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition-all duration-200">
-              <option value="tiktok">TikTok</option>
-              <option value="ytmp4">YouTube (Video)</option>
-              <option value="ytmp3">YouTube (Audio)</option>
-              <option value="instagram">Instagram</option>
-              <option value="facebook">Facebook</option>
-              <option value="spotify">Spotify</option>
-            </select>
-          </div>
-          <div class="flex items-end">
-            <button id="fetchBtn" class="w-full bg-blue-400 text-white py-3 px-6 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 transition-all duration-200 font-medium">
-              <i class="fas fa-download mr-2"></i>Download now!
+        <div id="imageMessageContainer" class="hidden"></div>
+
+        <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center bg-gray-50 hover:border-blue-400 hover:bg-blue-50 transition-colors">
+          <div id="imageUploadArea">
+            <i class="fas fa-cloud-upload-alt text-4xl mb-4 text-blue-500"></i>
+            <p class="text-slate-600 mb-4">Drag and drop your image here or click to browse</p>
+            <input type="file" id="imageInput" accept="image/*" class="hidden">
+            <button onclick="document.getElementById('imageInput').click()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors shadow-md">
+              <i class="fas fa-folder-open mr-2"></i>Choose Image
             </button>
           </div>
         </div>
-      </div>
 
-      <div id="loading" class="hidden text-center py-8">
-        <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400"></div>
-        <p class="text-slate-600 mt-4">Mengambil informasi video...</p>
-      </div>
+        <div id="imagePreview" class="mt-6 hidden">
+          <div class="relative">
+            <img id="previewImg" class="w-full max-w-md mx-auto rounded-lg shadow-lg" alt="Preview">
+            <button id="removeImage" class="absolute top-2 right-2 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-red-600 transition-colors shadow-md">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
 
-      <div id="platformMessage" class="hidden mb-6">
-        <div class="bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-3 rounded-lg">
-          <i class="fas fa-check-circle mr-2"></i>
-          <span id="platformText">Platform detected: TIKTOK</span>
+          <div class="mt-4 flex flex-wrap gap-2 justify-center">
+            <button id="convertBtn" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg transition-colors shadow-md">
+              <i class="fas fa-magic mr-2"></i>Convert to Ghibli
+            </button>
+            <button id="removeBgBtn" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors shadow-md">
+              <i class="fas fa-cut mr-2"></i>Remove Background
+            </button>
+            <button id="upscaleBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors shadow-md">
+              <i class="fas fa-expand-arrows-alt mr-2"></i>Upscale 4x
+            </button>
+          </div>
+        </div>
+
+        <div id="imageLoading" class="hidden mt-6 text-center">
+          <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+          <p class="text-slate-600 mt-2">Processing image...</p>
         </div>
       </div>
 
-      <div id="videoInfo" class="hidden bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
-        <h2 class="text-2xl font-bold text-slate-800 mb-4">
-          <i class="fas fa-info-circle text-blue-400"></i> Informasi Video
-        </h2>
-        <div id="videoDetails"></div>
-      </div>
+      <div id="imageResultSection" class="hidden bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200">
+        <h3 class="text-lg font-semibold mb-4 text-slate-800">
+          <i class="fas fa-check-circle mr-2"></i>Processing Complete
+        </h3>
 
-      <div id="downloadOptions" class="hidden bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-        <h2 class="text-2xl font-bold text-slate-800 mb-4">
-          <i class="fas fa-download text-emerald-500"></i> Opsi Download
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="text-center">
+            <h4 class="font-medium mb-2 text-slate-700">Original Image</h4>
+            <div class="relative">
+              <img id="originalImage" class="w-full rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity" alt="Original">
+              <button id="viewOriginalBtn" class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-colors rounded-lg flex items-center justify-center">
+                <i class="fas fa-expand text-white opacity-0 hover:opacity-100 transition-opacity"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <h4 class="font-medium mb-2 text-slate-700">Processed Image</h4>
+            <div class="relative">
+              <img id="processedImage" class="w-full rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity" alt="Processed">
+              <button id="viewProcessedBtn" class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-colors rounded-lg flex items-center justify-center">
+                <i class="fas fa-expand text-white opacity-0 hover:opacity-100 transition-opacity"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-2 justify-center">
+          <button id="downloadBtn" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors shadow-md">
+            <i class="fas fa-download mr-2"></i>Download Processed
+          </button>
+          <button id="downloadBothBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors shadow-md">
+            <i class="fas fa-download mr-2"></i>Download Both
+          </button>
+          <button id="convertAnotherBtn" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors shadow-md">
+            <i class="fas fa-plus mr-2"></i>Convert Another
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="videoContent" class="hidden">
+      <div class="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200">
+        <h2 class="text-xl font-semibold mb-4 text-slate-800">
+          <i class="fas fa-download mr-2"></i>Video & Audio Downloader
         </h2>
-        <div id="downloadLinks"></div>
+
+        <div id="videoMessageContainer" class="hidden"></div>
+
+        <div id="platformMessage" class="hidden mb-4 px-4 py-3 rounded-lg border bg-blue-50 border-blue-200 text-blue-800">
+          <i class="fas fa-info-circle mr-2"></i>
+          <span id="platformText"></span>
+        </div>
+
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Video URL</label>
+            <input type="text" id="videoUrl" placeholder="Paste your video URL here..." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Platform</label>
+            <select id="platformSelect" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              <option value="tiktok">TikTok</option>
+              <option value="facebook">Facebook</option>
+              <option value="ytmp4">YouTube (Video)</option>
+              <option value="ytmp3">YouTube (Audio)</option>
+              <option value="spotify">Spotify</option>
+              <option value="instagram">Instagram</option>
+            </select>
+          </div>
+
+          <button id="fetchBtn" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition-colors shadow-md">
+            <i class="fas fa-download mr-2"></i>Download Media
+          </button>
+        </div>
+
+        <div id="videoLoading" class="hidden mt-6 text-center">
+          <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+          <p class="text-slate-600 mt-2">Fetching video information...</p>
+        </div>
+
+        <div id="videoInfo" class="hidden mt-6">
+          <h3 class="text-lg font-semibold mb-4 text-slate-800">Media Preview</h3>
+          <div id="videoDetails"></div>
+        </div>
+
+        <!-- Download Options -->
+        <div id="downloadOptions" class="hidden mt-6">
+          <h3 class="text-lg font-semibold mb-4 text-slate-800">Download Options</h3>
+          <div id="downloadLinks"></div>
+        </div>
       </div>
     </div>
   </main>
 
-  <footer class="bg-white border-t border-slate-200 mt-16">
-    <div class="container mx-auto px-4 py-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div class="md:col-span-1">
-          <div class="flex items-center mb-4">
-            <i class="fas fa-cloud-download-alt text-blue-400 text-2xl mr-3"></i>
-            <span class="text-xl font-bold text-slate-800">Preniv Downloader</span>
-          </div>
-          <p class="text-slate-600 text-sm">
-            Platform terpercaya untuk download video dari berbagai social media dengan mudah dan cepat.
-          </p>
-        </div>
+  <div id="fullSizeModal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+    <div class="relative max-w-4xl max-h-full p-4">
+      <button id="closeModal" class="absolute top-2 right-2 bg-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-100 transition-colors">
+        <i class="fas fa-times text-slate-600"></i>
+      </button>
+      <img id="fullSizeImage" class="max-w-full max-h-full rounded-lg" alt="Full Size">
+    </div>
+  </div>
 
+  <footer class="bg-white/90 backdrop-blur-sm border-t border-gray-200 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h4 class="font-semibold text-slate-800 mb-3">Services</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">TikTok Downloader</a></li>
-            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">YouTube Downloader</a></li>
-            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Instagram Downloader</a></li>
-            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Facebook Downloader</a></li>
-            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Spotify Downloader</a></li>
-            <li><a href="/prenivdlapp/tools/" class="text-slate-600 hover:text-blue-400 transition-colors">Tools Enhanced</a></li>
+          <h3 class="text-lg font-semibold text-slate-800 mb-4">Preniv Media Tool</h3>
+          <p class="text-slate-600">A comprehensive tool for image processing and video downloading from various platforms.</p>
+        </div>
+        <div>
+          <h4 class="text-md font-medium text-slate-800 mb-4">Features</h4>
+          <ul class="text-slate-600 space-y-2">
+            <li>Ghibli Style Conversion</li>
+            <li>Background Removal</li>
+            <li>Image Upscaling</li>
+            <li>Multi-platform Video Download</li>
           </ul>
         </div>
-
         <div>
-          <h4 class="font-semibold text-slate-800 mb-3">Support</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">FAQ</a></li>
-            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Help Center</a></li>
-            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Contact Us</a></li>
-            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Report Issue</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-semibold text-slate-800 mb-3">Legal</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Privacy Policy</a></li>
-            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Terms of Service</a></li>
-            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Cookie Policy</a></li>
-            <li><a href="#" class="text-slate-600 hover:text-blue-400 transition-colors">Disclaimer</a></li>
+          <h4 class="text-md font-medium text-slate-800 mb-4">Supported Platforms</h4>
+          <ul class="text-slate-600 space-y-2">
+            <li>TikTok</li>
+            <li>YouTube</li>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Spotify</li>
           </ul>
         </div>
       </div>
-
-      <div class="border-t border-slate-200 mt-8 pt-6">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <p class="text-slate-600 text-sm">
-            © 2024 Preniv Downloader. All rights reserved.
-             <script language="JavaScript" type="text/javascript" src="https://gnrcounter.com/counter.php?accId=04ddaf65a8b3dcc39d4c5dcc11fc445f"></script>
-              <noscript>
-              <a href="https://preniv.com" title="Web Analytics">Web Analytics</a>
-            </noscript>
-          </p>
-          <div class="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
-              <i class="fab fa-facebook text-lg"></i>
-            </a>
-            <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
-              <i class="fab fa-twitter text-lg"></i>
-            </a>
-            <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
-              <i class="fab fa-instagram text-lg"></i>
-            </a>
-            <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">
-              <i class="fab fa-youtube text-lg"></i>
-            </a>
-          </div>
-        </div>
+      <div class="border-t border-gray-200 mt-8 pt-8 text-center text-slate-600">
+        <p>&copy; 2025 Preniv Media Tool. All rights reserved.
+		  <script language="JavaScript" type="text/javascript" src="https://gnrcounter.com/counter.php?accId=04ddaf65a8b3dcc39d4c5dcc11fc445f"></script>
+          <noscript>
+            <a href="https://preniv.com" title="Web Analytics">Web Analytics</a>
+         </noscript>
+		</p>
       </div>
     </div>
   </footer>
-
   <script type="text/javascript" src="script.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-      if (mobileMenuToggle && mobileMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
-          mobileMenu.classList.toggle('hidden');
-        });
-      }
-    });
-  </script>
-
 </body>
 </html>
