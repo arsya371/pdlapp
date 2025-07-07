@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Preniv Media Tool</title>
+  <meta name="description" content="Get in touch with Preniv Media Tool team. We're here to help with your questions and feedback.">
+  <meta name="keywords" content="preniv media tools, contact, support, feedback, help">
+  <link rel="icon" type="image/x-icon" href="./media/logo_preniv.ico">
+  <meta property="og:title" content="Contact Us - Preniv Media Tool">
+  <meta property="og:description" content="Get in touch with Preniv Media Tool team. We're here to help with your questions and feedback.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://preniv.com/contact">
+  <meta property="og:site_name" content="Preniv Media Tools">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="./media/banner_preniv.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Contact Preniv Media Tools">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
+  <header class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="/" class="text-2xl font-bold text-slate-800 dark:text-white transition-colors duration-300">
+            <i class="fas fa-tools mr-2 text-blue-500"></i>
+            Preniv Media Tool
+          </a>
+        </div>
+        <nav class="hidden md:flex space-x-8 items-center">
+          <a href="/" class="text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
+          <a href="about" class="text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+          <a href="contact" class="text-blue-600 dark:text-blue-400 font-medium">Contact</a>
+          
+          <div class="flex items-center">
+            <button id="darkModeToggle" class="relative w-14 h-7 bg-gray-200 dark:bg-gray-600 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800">
+              <div class="absolute left-1 top-1 w-5 h-5 bg-white dark:bg-gray-800 rounded-full shadow-md transform transition-transform duration-300 dark:translate-x-6 flex items-center justify-center">
+                <i class="fas fa-sun text-xs text-yellow-500 dark:hidden"></i>
+                <i class="fas fa-moon text-xs text-blue-400 hidden dark:block"></i>
+              </div>
+            </button>
+          </div>
+        </nav>
+        <div class="flex items-center space-x-4 md:hidden">
+          <button id="darkModeToggleMobile" class="relative w-12 h-6 bg-gray-200 dark:bg-gray-600 rounded-full transition-colors duration-300 focus:outline-none">
+            <div class="absolute left-0.5 top-0.5 w-5 h-5 bg-white dark:bg-gray-800 rounded-full shadow-md transform transition-transform duration-300 dark:translate-x-5 flex items-center justify-center">
+              <i class="fas fa-sun text-xs text-yellow-500 dark:hidden"></i>
+              <i class="fas fa-moon text-xs text-blue-400 hidden dark:block"></i>
+            </div>
+          </button>
+          <button id="hamburgerBtn">
+            <i class="fas fa-bars text-slate-600 dark:text-gray-300"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700 transition-colors duration-300">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="index.html" class="block px-3 py-2 text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
+        <a href="about.html" class="block px-3 py-2 text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+        <a href="contact.html" class="block px-3 py-2 text-blue-600 dark:text-blue-400 font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="space-y-8">
+        <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-200 dark:border-gray-700 transition-colors duration-300">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-info-circle text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-800 dark:text-white">Contact Information</h2>
+          </div>
+
+          <div class="space-y-6">
+            <div class="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg transition-colors duration-300">
+              <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-envelope text-blue-600 dark:text-blue-400"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-800 dark:text-white">Email</h3>
+                <p class="text-slate-600 dark:text-gray-300">contact@preniv.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg transition-colors duration-300">
+              <div class="w-10 h-10 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-phone text-green-600 dark:text-green-400"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-800 dark:text-white">Phone</h3>
+                <p class="text-slate-600 dark:text-gray-300">+62 21 1234 5678</p>
+              </div>
+            </div>
+
+            <div class="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg transition-colors duration-300">
+              <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-map-marker-alt text-purple-600 dark:text-purple-400"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-800 dark:text-white">Address</h3>
+                <p class="text-slate-600 dark:text-gray-300">Jakarta, Indonesia</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-200 dark:border-gray-700 transition-colors duration-300">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-share-alt text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-800 dark:text-white">Follow Us</h2>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <a href="#" class="flex items-center justify-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors duration-300 group">
+              <i class="fab fa-facebook text-blue-600 text-2xl group-hover:scale-110 transition-transform duration-300"></i>
+              <span class="ml-2 text-slate-700 dark:text-gray-300 font-medium">Facebook</span>
+            </a>
+            <a href="#" class="flex items-center justify-center p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/40 transition-colors duration-300 group">
+              <i class="fab fa-instagram text-pink-500 text-2xl group-hover:scale-110 transition-transform duration-300"></i>
+              <span class="ml-2 text-slate-700 dark:text-gray-300 font-medium">Instagram</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-200 dark:border-gray-700 transition-colors duration-300">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-red-500 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-question-circle text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-800 dark:text-white">Quick Help</h2>
+          </div>
+
+          <div class="space-y-3">
+            <a href="#" class="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-300">
+              <div class="flex items-center">
+                <i class="fas fa-question text-green-500 mr-3"></i>
+                <span class="text-slate-700 dark:text-gray-300">FAQ</span>
+              </div>
+            </a>
+            <a href="#" class="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-300">
+              <div class="flex items-center">
+                <i class="fas fa-life-ring text-purple-500 mr-3"></i>
+                <span class="text-slate-700 dark:text-gray-300">Support Center</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700 mt-12 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold text-slate-800 dark:text-white mb-4 transition-colors duration-300">Preniv Media Tool</h3>
+          <p class="text-slate-600 dark:text-gray-400 transition-colors duration-300">A comprehensive tool for image processing and video downloading from various platforms.</p>
+        </div>
+        <div>
+          <h4 class="text-md font-medium text-slate-800 dark:text-white mb-4 transition-colors duration-300">Features</h4>
+          <ul class="text-slate-600 dark:text-gray-400 space-y-2 transition-colors duration-300">
+            <li>Ghibli Style Conversion</li>
+            <li>Background Removal</li>
+            <li>Image Upscaling</li>
+            <li>Multi-platform Video Download</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-md font-medium text-slate-800 dark:text-white mb-4 transition-colors duration-300">Supported Platforms</h4>
+          <ul class="text-slate-600 dark:text-gray-400 space-y-2 transition-colors duration-300">
+            <li>TikTok</li>
+            <li>YouTube</li>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Spotify</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-slate-600 dark:text-gray-400 transition-colors duration-300">
+        <p>&copy; 2025 Preniv Media Tool. All rights reserved.
+          <script language="JavaScript" type="text/javascript" src="https://gnrcounter.com/counter.php?accId=04ddaf65a8b3dcc39d4c5dcc11fc445f"></script>
+          <noscript>
+            <a href="https://preniv.com" title="Web Analytics">Web Analytics</a>
+          </noscript>
+        </p>
+      </div>
+    </div>
+  </footer>
+  </body>
+  </html>
